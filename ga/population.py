@@ -18,6 +18,7 @@ class Population(object):
             element.calculate_fitness(self.target)
 
     def generate_mating_pool(self):
+        self.mating_pool=[]
         for element in self.elements:
             for _ in range(round(element.fitness_score*10)):
                 self.mating_pool.append(element)

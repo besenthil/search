@@ -7,7 +7,10 @@ class DNA(object):
         self.genes = []
         self.fitness_score=0
         for _ in range(length):
-            self.genes.append(chr(randint(97,122)))
+            ascii_num = randint(63, 122)
+            if ascii_num == 63 or (ascii_num > 90 and ascii_num < 97):
+                ascii_num = 32
+            self.genes.append(chr(ascii_num))
 
     def calculate_fitness(self,target):
         self.fitness_score=0
@@ -29,4 +32,7 @@ class DNA(object):
         for _ in range(num_chars):
             index=randint(0,self.length-1)
             if self.genes[index] != target[index]:
-                self.genes[index]=chr(randint(97,122))
+                ascii_num = randint(63, 122)
+                if ascii_num == 63 or (ascii_num > 90 and ascii_num < 97):
+                    ascii_num = 32
+                self.genes[index]=chr(ascii_num)

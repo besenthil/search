@@ -2,12 +2,12 @@ from ga.population import Population
 import time
 import sys
 
-TARGET = list('tobeornotto')
-POPULATION_SIZE=200
+TARGET = list('To be or not to be')
+POPULATION_SIZE=500
 MUTATION_RATE=0.01
 
 if __name__ == "__main__":
-    for _ in range(100):
+    for _ in range(1):
         pop = Population(TARGET,POPULATION_SIZE,MUTATION_RATE)
         found=False
         while (not found):
@@ -17,7 +17,7 @@ if __name__ == "__main__":
                 #print (element.genes,element.fitness_score)
                 if ''.join(TARGET) == ''.join(element.genes):
                     found = True
-                    #print (element.genes,element.fitness_score)
+                    print (element.genes,element.fitness_score)
                     break
             pop.reproduce()
 
