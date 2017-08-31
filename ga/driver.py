@@ -7,7 +7,7 @@ POPULATION_SIZE=500
 MUTATION_RATE=0.01
 
 if __name__ == "__main__":
-    for _ in range(1):
+    for _ in range(10):
         pop = Population(TARGET,POPULATION_SIZE,MUTATION_RATE)
         found=False
         while (not found):
@@ -17,7 +17,7 @@ if __name__ == "__main__":
                 #print (element.genes,element.fitness_score)
                 if ''.join(TARGET) == ''.join(element.genes):
                     found = True
-                    print (element.genes,element.fitness_score)
+                    print (''.join(element.genes),element.fitness_score)
                     break
             pop.reproduce()
 
