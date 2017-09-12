@@ -3,13 +3,13 @@ import time
 import sys
 from random import randint
 
-COST = [randint(1,10) for _ in range(1,30)]
+COST = [100,25,10,5,1]
 print (COST)
-BENEFIT = [randint(1,10) for _ in range(1,30)]
+BENEFIT = [1,1,1,1,1]
 #COST=[2,3,2,1,4,10]
 #BENEFIT=[1,1,1,1,1,1]
 
-TARGET_COST=14
+TARGET_COST=122
 POPULATION_SIZE=50
 MUTATION_RATE=0.01
 
